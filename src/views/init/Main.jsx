@@ -33,7 +33,7 @@ function Main() {
           <img src={banner2} className="w-full rounded-2xl border-black border-1" />
         )}
       </div>
-      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl xs:mt-4 xl:mt-0 mb-10">
+      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl mt-0 mb-10">
         DONDE LO DIVINO Y LO PERVERSO CONVERGEN
       </h2>
       <div className="grid grid-cols-6 gap-6 mt-5">
