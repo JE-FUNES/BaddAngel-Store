@@ -12,7 +12,7 @@ import { faker as getProducts } from "@/utils";
 import * as $_ from "lodash";
 import classnames from "classnames";
 import { useState } from "react";
-import banner from "../../assets/images/badangel/banner.jpg"
+import banner from "../../assets/images/badangel/banner.jpg";
 
 function Main() {
   const productos = getProducts();
@@ -22,11 +22,12 @@ function Main() {
   return (
     <>
       <div className="flex w-full justify-center mb-10 mt-2">
-      <img src={banner} className="w-full border-black border-1" />
+        <img src={banner} className="w-full border-black border-1" />
       </div>
-      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl mb-10">DONDE LO DIVINO Y LO PERVERSO CONVERGEN</h2>
+      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl mb-10">
+        DONDE LO DIVINO Y LO PERVERSO CONVERGEN
+      </h2>
       <div className="grid grid-cols-6 gap-6 mt-5">
-        
         {/* BEGIN: Products Layout */}
         {productos.map((prod) => (
           <div
@@ -42,45 +43,54 @@ function Main() {
                     src={prod.imagenHorizontal}
                   />
                   {prod.oferta ? (
-                    <span className="absolute top-0 bg-pending text-white text-xs m-5 px-2 py-1 rounded z-10">
+                    <span className="absolute top-0 bg-pending text-white text-lg m-5 px-2 py-1 rounded z-10">
                       OFERTA
                     </span>
-                  ): ("")}
+                  ) : (
+                    ""
+                  )}
                   <div className="absolute bottom-0 text-white px-5 pb-6 z-10">
                     <a href="" className="block font-medium text-lg">
                       {prod.titulo}
                     </a>
-                    <span className="text-white/90 text-xs italic mt-3">
-                      {prod.detalle}
-                    </span>
                   </div>
                 </div>
                 <div className="text-slate-600 dark:text-slate-500 px-5 mt-5">
                   <div className="flex items-center">
                     {prod.oferta ? (
                       <p>
+                        <div className="flex items-center mt-1 mb-3">
 
-                      <span className="line-through mr-2">
-                      
-                      Precio: ${prod.precio}
-                      </span>
-                      <span className="text-red-500 font-bold">
-                       
-                      Oferta: ${prod.precioOferta}
-                      </span>
+                        <span className=" text-lg italic">
+                          {prod.detalle}
+                        </span>
+
+                        </div>
+                        <span className="line-through mr-2">
+                          Precio: ${prod.precio}
+                        </span>
+                        <span className="text-red-500 font-bold text-lg">
+                           ${prod.precioOferta}
+                        </span>
                       </p>
-                      
                     ) : (
-                      <p className="font-bold">Precio: ${prod.precio}</p>
-                    )
-                  }
+                      <p>
+                        <div className="flex items-center mt-1 mb-3">
+
+                        <span className=" text-lg italic">
+                          {prod.detalle}
+                        </span>
+                        </div>
+                        <span className="font-bold">
+                          Precio: ${prod.precio}
+                        </span>
+                      </p>
+                    )}
                   </div>
                   <div className="flex items-center mt-2">
-                    <Lucide icon="Layers" className="w-4 h-4 mr-2" /> 
+                    <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                     Disponibilidad: {prod.disponibilidad}
                   </div>
-                  
-                  
                 </div>
               </div>
               {/*<div className="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">

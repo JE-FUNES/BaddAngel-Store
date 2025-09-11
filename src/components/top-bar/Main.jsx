@@ -60,7 +60,7 @@ function Main(props) {
           {/* END: Breadcrumb */}
           {/* BEGIN: Search */}
           <div className="intro-x relative mr-2">
-            <div className="search hidden sm:block w-100">
+            <div className="search w-100">
               <input
                 type="text"
                 className="search__input form-control border-transparent text-black"
@@ -73,12 +73,7 @@ function Main(props) {
                 className="search__icon dark:text-slate-500"
               />
             </div>
-            <a className="notification sm:hidden" href="">
-              <Lucide
-                icon="Search"
-                className="notification__icon dark:text-slate-500"
-              />
-            </a>
+            
             
           </div>
           {/* END: Search */}
