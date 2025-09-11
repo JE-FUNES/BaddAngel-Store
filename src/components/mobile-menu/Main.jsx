@@ -7,10 +7,10 @@ import { useRecoilValue } from "recoil";
 import { nestedMenu } from "@/layouts/side-menu";
 import { toggleMobileMenu, linkTo, enter, leave } from "./index";
 import { Lucide } from "@/base-components";
-import logoUrl from "@/assets/images/logo.svg";
 import classnames from "classnames";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import SimpleBar from "simplebar";
+import logoUrl from "../../assets/images/badangel/logo-menu.png";
 
 function Main(props) {
   const navigate = useNavigate();
@@ -38,11 +38,11 @@ function Main(props) {
       >
         <div className="mobile-menu-bar">
           <a href="" className="flex mr-auto">
-            <img
-              alt="Midone Tailwind HTML Admin Template"
-              className="w-6"
-              src={logoUrl}
-            />
+           <img
+                         alt="Badd Angel"
+                         className="w-48"
+                         src={logoUrl}
+                       />
           </a>
           <a
             href="#"

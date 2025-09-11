@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Lucide,
@@ -11,11 +11,13 @@ import {
   DropdownHeader,
   DropdownDivider,
 } from "@/base-components";
-import logoUrl from "@/assets/images/logo.svg";
+import logoUrl from "../../assets/images/badangel/logo-menu.png";
+
 import { faker as $f } from "@/utils";
 import * as $_ from "lodash";
 import classnames from "classnames";
 import PropTypes from "prop-types";
+import DarkModeSwitcher from "@/components/dark-mode-switcher/Main";
 
 function Main(props) {
   const [searchDropdown, setSearchDropdown] = useState(false);
@@ -25,6 +27,16 @@ function Main(props) {
   const hideSearchDropdown = () => {
     setSearchDropdown(false);
   };
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+
+   useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 820);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -32,39 +44,27 @@ function Main(props) {
       <div
         className={`${props.className} top-bar-boxed h-[70px] md:h-[65px] z-[51] border-b border-white/[0.08] mt-12 md:mt-0 -mx-3 sm:-mx-8 md:-mx-0 px-3 md:border-b-0 relative md:fixed md:inset-x-0 md:top-0 sm:px-8 md:px-10 md:pt-10 md:bg-gradient-to-b md:from-slate-100 md:to-transparent dark:md:from-darkmode-700`}
       >
-        <div className="h-full flex items-center">
+        <div className="h-full flex items-center ">
           {/* BEGIN: Logo */}
-          <Link
-            to="/"
-            className="logo -intro-x md:flex xl:w-[180px] block"
-          >
-            <img
-              alt="Enigma Tailwind HTML Admin Template"
-              className="logo__image w-6"
-              src={logoUrl}
-            />
-            <span className="logo__text text-white text-lg ml-3"> Enigma </span>
+          {isLargeScreen &&
+          <Link to="/" className="logo -intro-x md:flex xl:w-[180px] block">
+            <img alt="Badd Angel" className="logo__image w-50" src={logoUrl} />
           </Link>
+          }
           {/* END: Logo */}
           {/* BEGIN: Breadcrumb */}
-          <nav aria-label="breadcrumb" className="-intro-x h-[45px] mr-auto">
-            <ol className="breadcrumb breadcrumb-light">
-              <li className="breadcrumb-item">
-                <a href="#">Application</a>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                Dashboard
-              </li>
-            </ol>
-          </nav>
+          <nav
+            aria-label="breadcrumb"
+            className="-intro-x h-[45px] mr-auto"
+          ></nav>
           {/* END: Breadcrumb */}
           {/* BEGIN: Search */}
-          <div className="intro-x relative mr-3 sm:mr-6">
-            <div className="search hidden sm:block">
+          <div className="intro-x relative mr-2">
+            <div className="search hidden sm:block w-100">
               <input
                 type="text"
-                className="search__input form-control border-transparent"
-                placeholder="Search..."
+                className="search__input form-control border-transparent text-black"
+                placeholder="Buscar..."
                 onFocus={showSearchDropdown}
                 onBlur={hideSearchDropdown}
               />
@@ -79,77 +79,13 @@ function Main(props) {
                 className="notification__icon dark:text-slate-500"
               />
             </a>
-            <div
-              className={classnames({
-                "search-result": true,
-                show: searchDropdown,
-              })}
-            >
-              <div className="search-result__content">
-                <div className="search-result__content__title">Pages</div>
-                <div className="mb-5">
-                  <a href="" className="flex items-center">
-                    <div className="w-8 h-8 bg-success/20 dark:bg-success/10 text-success flex items-center justify-center rounded-full">
-                      <Lucide icon="Inbox" className="w-4 h-4" />
-                    </div>
-                    <div className="ml-3">Mail Settings</div>
-                  </a>
-                  <a href="" className="flex items-center mt-2">
-                    <div className="w-8 h-8 bg-pending/10 text-pending flex items-center justify-center rounded-full">
-                      <Lucide icon="Users" className="w-4 h-4" />
-                    </div>
-                    <div className="ml-3">Users & Permissions</div>
-                  </a>
-                  <a href="" className="flex items-center mt-2">
-                    <div className="w-8 h-8 bg-primary/10 dark:bg-primary/20 text-primary/80 flex items-center justify-center rounded-full">
-                      <Lucide icon="CreditCard" className="w-4 h-4" />
-                    </div>
-                    <div className="ml-3">Transactions Report</div>
-                  </a>
-                </div>
-                <div className="search-result__content__title">Users</div>
-                <div className="mb-5">
-                  {$_.take($f(), 4).map((faker, fakerKey) => (
-                    <a
-                      key={fakerKey}
-                      href=""
-                      className="flex items-center mt-2"
-                    >
-                      <div className="w-8 h-8 image-fit">
-                        <img
-                          alt="Midone Tailwind HTML Admin Template"
-                          className="rounded-full"
-                          src={faker.photos[0]}
-                        />
-                      </div>
-                      <div className="ml-3">{faker.users[0].name}</div>
-                      <div className="ml-auto w-48 truncate text-slate-500 text-xs text-right">
-                        {faker.users[0].email}
-                      </div>
-                    </a>
-                  ))}
-                </div>
-                <div className="search-result__content__title">Products</div>
-                {$_.take($f(), 4).map((faker, fakerKey) => (
-                  <a key={fakerKey} href="" className="flex items-center mt-2">
-                    <div className="w-8 h-8 image-fit">
-                      <img
-                        alt="Midone Tailwind HTML Admin Template"
-                        className="rounded-full"
-                        src={faker.images[0]}
-                      />
-                    </div>
-                    <div className="ml-3">{faker.products[0].name}</div>
-                    <div className="ml-auto w-48 truncate text-slate-500 text-xs text-right">
-                      {faker.products[0].category}
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+            
           </div>
           {/* END: Search */}
+          {/*BEGIN DARK MODE */}
+          <DarkModeSwitcher />
           {/* BEGIN: Notifications */}
+          {/*
           <Dropdown className="intro-x mr-4 sm:mr-6">
             <DropdownToggle
               tag="div"
@@ -198,8 +134,10 @@ function Main(props) {
               </DropdownContent>
             </DropdownMenu>
           </Dropdown>
+          /*}
           {/* END: Notifications */}
           {/* BEGIN: Account Menu */}
+          {/*
           <Dropdown className="intro-x w-8 h-8">
             <DropdownToggle
               tag="div"
@@ -239,6 +177,7 @@ function Main(props) {
               </DropdownContent>
             </DropdownMenu>
           </Dropdown>
+          /*}
           {/* END: Account Menu */}
         </div>
       </div>

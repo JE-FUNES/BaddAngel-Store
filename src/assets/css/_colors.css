@@ -2,13 +2,13 @@
 :root {
     --color-primary: theme("colors.rgb.slate.950");
     --color-secondary: theme("colors.rgb.slate.50");
-    --color-success: theme("colors.rgb.teal.600");
+    --color-success: theme("colors.rgb.red.500");
     --color-info: theme("colors.rgb.red.500");
     --color-warning: theme("colors.rgb.red.500");
     --color-pending: theme("colors.rgb.red.600");
     --color-danger: theme("colors.rgb.red.500");
-    --color-light: theme("colors.rgb.red.800");
-    --color-dark: theme("colors.rgb.purple.900");
+    --color-light: theme("colors.rgb.red.500");
+    --color-dark: theme("colors.rgb.red.700");
     --color-slate-50: theme("colors.rgb.slate.50");
     --color-slate-100: theme("colors.rgb.slate.100");
     --color-slate-200: theme("colors.rgb.slate.200");
@@ -23,18 +23,19 @@
 
 /* Default dark-mode colors */
 .dark {
-    --color-primary: theme("colors.rgb.purple.900");
-    --color-slate-500: theme("colors.rgb.slate.500");
+    --color-primary: theme("colors.rgb.red.700");
+    --color-slate-500: theme("colors.rgb.slate.100");
     --color-darkmode-50: 87 103 132;
     --color-darkmode-100: 74 90 121;
     --color-darkmode-200: 65 81 114;
     --color-darkmode-300: 53 69 103;
     --color-darkmode-400: 48 61 93;
     --color-darkmode-500: 41 53 82;
-    --color-darkmode-600: 40 51 78;
-    --color-darkmode-700: 35 45 69;
-    --color-darkmode-800: 27 37 59;
-    --color-darkmode-900: 15 23 42;
+    --color-darkmode-600: 00 00 00;
+    /*--color-darkmode-700: 55 52 53;*/
+    --color-darkmode-700: 55 52 53;
+    --color-darkmode-800: 55 52 53;
+    --color-darkmode-900: 82 82 82;
 }
 
 /* Theme 1 colors */
