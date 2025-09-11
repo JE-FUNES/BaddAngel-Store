@@ -27,7 +27,7 @@ function Main(props) {
     <>
       {/* BEGIN: Dark Mode Switcher */}
       <div
-        className="dark-mode-switcher bg-slate-200 dark:bg-slate-800 cursor-pointer box border rounded-full xs:w-30 xl:w-40 h-10 flex items-center justify-center z-50 mb-0 mx-1"
+        className="dark-mode-switcher bg-slate-200 dark:bg-slate-800 cursor-pointer box border rounded-full xs:w-30 xl:w-35 h-10 flex items-center justify-center z-50 mb-0 mx-1"
         onClick={switchMode}
       >
         <div className="mx-2 text-slate-900 dark:text-slate-200">

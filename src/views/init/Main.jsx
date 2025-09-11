@@ -60,26 +60,23 @@ function Main() {
                     {prod.oferta ? (
                       <p>
                         <div className="flex items-center mt-1 mb-3">
-
-                        <span className=" text-lg italic">
-                          {prod.detalle}
-                        </span>
-
+                          <span className=" text-lg italic">
+                            {prod.detalle}
+                          </span>
                         </div>
                         <span className="line-through mr-2">
                           Precio: ${prod.precio}
                         </span>
                         <span className="text-red-500 font-bold text-lg">
-                           ${prod.precioOferta}
+                          ${prod.precioOferta}
                         </span>
                       </p>
                     ) : (
                       <p>
                         <div className="flex items-center mt-1 mb-3">
-
-                        <span className=" text-lg italic">
-                          {prod.detalle}
-                        </span>
+                          <span className=" text-lg italic">
+                            {prod.detalle}
+                          </span>
                         </div>
                         <span className="font-bold">
                           Precio: ${prod.precio}
@@ -177,6 +174,12 @@ function Main() {
         */}
         {/* END: Pagination */}
       </div>
+      <div className="flex w-full justify-center my-10">
+        <img src={banner} className="w-full border-black border-1" />
+      </div>
+      <h3 className="text-black dark:text-white font-base justify-center items-center text-center text-xl mb-10">
+        Alguna frase corta o detalle importante
+      </h3>
       {/* BEGIN: Delete Confirmation Modal */}
       <Modal
         show={deleteConfirmationModal}
