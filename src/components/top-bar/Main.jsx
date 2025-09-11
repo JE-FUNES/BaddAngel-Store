@@ -177,9 +177,11 @@ function Main(props) {
         </div>
       </div>
       {/* END: Top Bar */}
-      <div
+      {isLargeScreen && (
+
+        <div
         className="xs:hidden flex justify-center items-center bg-black xl:h-[36px] z-[51] xl:mb-1  xl:-mx-0  xl:fixed xl:inset-x-0 xl:bottom-0  xl:px-10 xl:py-1 dark:md:from-darkmode-700"
-      >
+        >
         <span className="text-white">
         Badd Angel ©2025 - Sitio diseñado por 
         <span className="ml-1">
@@ -190,6 +192,7 @@ function Main(props) {
 
         </span>
       </div>
+      )}
     </>
   );
 }
