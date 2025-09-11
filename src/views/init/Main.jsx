@@ -30,7 +30,7 @@ function Main() {
 
           <img src={banner} className="w-full border-black border-1" />
         ): (
-          <img src={banner2} className="w-full rounded-2xl border-black border-1" />
+          <img src={banner2} className="w-full rounded-2xl border-black border-1 mt-2" />
         )}
       </div>
       <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl mt-0 mb-10">
