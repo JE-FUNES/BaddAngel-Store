@@ -68,6 +68,7 @@ import Validation from "../views/validation/Main";
 import Chart from "../views/chart/Main";
 import Slider from "../views/slider/Main";
 import ImageZoom from "../views/image-zoom/Main";
+import Init from "../views/init/Main"
 
 function Router() {
   const routes = [
@@ -75,7 +76,11 @@ function Router() {
       path: "/",
       element: <SideMenu />,
       children: [
-        
+        {
+          index: true,
+          element: <Init />,
+        },
+
         {
           path: "dashboard-overview-3",
           element: <DashboardOverview3 />,
