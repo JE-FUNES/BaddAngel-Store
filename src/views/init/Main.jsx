@@ -1,3 +1,4 @@
+
 import {
   Lucide,
   Dropdown,
@@ -13,18 +14,26 @@ import * as $_ from "lodash";
 import classnames from "classnames";
 import { useState } from "react";
 import banner from "../../assets/images/badangel/banner.jpg";
+import banner2 from "../../assets/images/badangel/bannerV.jpg";
 
 function Main() {
   const productos = getProducts();
+
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
 
   const [deleteConfirmationModal, setDeleteConfirmationModal] = useState(false);
 
   return (
     <>
-      <div className="flex w-full justify-center mb-10 mt-2">
-        <img src={banner} className="w-full border-black border-1" />
+      <div className="flex w-full justify-center xs:mb-6 xl:mb-10 mt-2">
+        {isLargeScreen ? (
+
+          <img src={banner} className="w-full border-black border-1" />
+        ): (
+          <img src={banner2} className="w-full rounded-2xl border-black border-1" />
+        )}
       </div>
-      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl mb-10">
+      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl xs:mt-4 xl:mt-0 mb-10">
         DONDE LO DIVINO Y LO PERVERSO CONVERGEN
       </h2>
       <div className="grid grid-cols-6 gap-6 mt-5">
