@@ -84,7 +84,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'videoPasarela': "url('/src/assets/images/badangel/video-pasarela-mp4.mp4')",
+        'fondoLogos': "url('/src/assets/images/badangel/fondo-ba.png')",
       },
       fontFamily: {
         roboto: ["Roboto"],

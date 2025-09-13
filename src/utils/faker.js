@@ -1,28 +1,32 @@
 // PRODUCTOS
 
 import ART007R from "../assets/images/badangel/productos/buzos/art007r-spike hoody-rojo.jpg";
-//import product1V from "../assets/images/preview-1-vert.jpg";
-import product2H from "../assets/images/preview-5.jpg";
-//import product2V from "../assets/images/preview-5-vert.jpg";
-import product3H from "../assets/images/preview-6.jpg";
-//import product3V from "../assets/images/preview-6-vert.jpg";
-import product4H from "../assets/images/preview-7.jpg";
-//import product4V from "../assets/images/preview-7-vert.jpg";
+import ART007RE from "../assets/images/badangel/productos/buzos/art007r-spike hoody-rojo-espalda.jpg";
+
+import ART007B from "../assets/images/badangel/productos/buzos/art007B-spike hoody-blanco.jpg";
+import ART007BE from "../assets/images/badangel/productos/buzos/art007B-spike hoody-blanco-espalda.jpg";
+
+import ART007BN from "../assets/images/badangel/productos/buzos/art007nB-spike hoody-negroyblanco.jpg";
+import ART007BNE from "../assets/images/badangel/productos/buzos/art007nB-spike hoody-negroyblanco-espalda.jpg";
+
+import ART007NR from "../assets/images/badangel/productos/buzos/art007nr-spike hoody-negroyrojo.jpg";
+import ART007NRE from "../assets/images/badangel/productos/buzos/art007nr-spike hoody-negroyrojo-espalda.jpg";
+
 
 // ✅ Listado de productos. Cada prenda con todos los datos requeridos
 export const products = [
   {
     codigo: "ART007R",
     titulo: "SPIKE HOODY",
-    imagenHorizontal: ART007R,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007R,
+    imagenHover: ART007RE,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "Único ( S al L )",
     detalle:
-      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero. Disponible en varias combinaciones de color.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% algodón",
     color: "rojo",
@@ -30,15 +34,15 @@ export const products = [
   {
     codigo: "ART007NR",
     titulo: "SPIKE HOODY",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007NR,
+    imagenHover: ART007NRE,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "Único ( S al L )",
     detalle:
-      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero. Disponible en varias combinaciones de color.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% algodón",
     color: "negro y rojo",
@@ -46,15 +50,15 @@ export const products = [
   {
     codigo: "ART007BN",
     titulo: "SPIKE HOODY",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007BN,
+    imagenHover: ART007BNE,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "Único ( S al L )",
     detalle:
-      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero. Disponible en varias combinaciones de color.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% algodón",
     color: "negro y blanco",
@@ -63,15 +67,15 @@ export const products = [
   {
     codigo: "ART007B",
     titulo: "SPIKE HOODY",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007B,
+    imagenHover: ART007BE,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "Único ( S al L )",
     detalle:
-      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero. Disponible en varias combinaciones de color.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+      "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% algodón",
     color: "blanco",
@@ -79,15 +83,15 @@ export const products = [
   {
     codigo: "ART004",
     titulo: "INFERNO JOGGER",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007NR,
+    //imagenHover: product4V,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "40",
     detalle:
       "Jogger de frisa de algodón peinado, con detalles en bies al corte y estampas laterales. Diseño cómodo y sin bolsillos.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% algodón",
     color: "rojo con estampas",
@@ -95,15 +99,15 @@ export const products = [
   {
     codigo: "ART003",
     titulo: "BAGGY TRIBAL FLAME",
-    imagenHorizontal: product3H,
-    //imagenVertical: product3V,
+    imagenPrincipal: ART007NR,
+    //imagenHover: product3V,
     precio: 9800,
     oferta: true,
     precioOferta: 7200,
     talle: "42",
     detalle:
       "Pantalón baggy de gabardina con bolsillos delanteros y traseros. Presenta roturas en rodillas y tribales rojos en laterales y bolsillos.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "Gabardina",
     color: "negro con tribales rojos",
@@ -111,15 +115,15 @@ export const products = [
  {
     codigo: "ART002",
     titulo: "LEATHER SPIKE",
-    imagenHorizontal: product2H,
-    //imagenVertical: product2V,
+    imagenPrincipal: ART007BN,
+    //imagenHover: product2V,
     precio: 7500,
     oferta: false,
     precioOferta: null,
     talle: "40",
     detalle:
       "Bermuda baggy de cuerina elastizada con bolsillos delanteros. Incluye serigrafía hecha a mano con doble estampa en delantero y trasero.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "Cuerina elastizada",
     color: "negro con estampas",
@@ -128,15 +132,15 @@ export const products = [
   {
     codigo: "ART005",
     titulo: "TOP DEAD TRIBAL",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007NR,
+    //imagenHover: product4V,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "S",
     detalle:
       "Top cruzado con estampas en delantero y trasero.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "Jersey de algodón 100%",
     color: "negro con estampa tribal",
@@ -144,15 +148,15 @@ export const products = [
     {
     codigo: "ART006",
     titulo: "TOP DEAD TOUCH",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007NR,
+    //imagenHover: product4V,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "S",
     detalle:
       "Top cruzado con estampas en delantero y trasero.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "Jersey de algodón 100%",
     color: "negro con estampa exclusiva",
@@ -160,15 +164,15 @@ export const products = [
   {
     codigo: "ART001",
     titulo: "CRUCIFIX MINI SKIRT",
-    imagenHorizontal: ART007R,
-    //imagenVertical: product1V,
+    imagenPrincipal: ART007R,
+    //imagenHover: product1V,
     precio: 12000,
     oferta: true,
     precioOferta: 8900,
     talle: "40",
     detalle:
       "Mini falda tableada con estampas exclusivas en cada tabla. Diseño elastizado con ojales metálicos regulables en los laterales y bolsillos funcionales.",
-    disponibilidad: "Stock Limitado para Entrega inmediata",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% poliéster elastizado",
     color: "blanco con estampas,"
@@ -177,15 +181,15 @@ export const products = [
    {
     codigo: "ART008",
     titulo: "SPIKY MINI BAG",
-    imagenHorizontal: product4H,
-    //imagenVertical: product4V,
+    imagenPrincipal: ART007NR,
+    //imagenHover: product4V,
     precio: 6400,
     oferta: false,
     precioOferta: null,
     talle: "Mini",
     detalle:
       "Mini bolso de gabardina forrado, con botón de cierre, asa regulable con hebilla y ojales. Incluye serigrafía hecha a mano y detalles de desgaste.",
-    disponibilidad: "Stock Limitado para Entrega inmediatan",
+    disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% poliéster elastizado",
     color: "blanco con estampas",

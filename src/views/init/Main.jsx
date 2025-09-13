@@ -12,14 +12,24 @@ import {
 import { faker as getProducts } from "@/utils";
 import * as $_ from "lodash";
 import classnames from "classnames";
-import { useState } from "react";
-import banner from "../../assets/images/badangel/banner.jpg";
+import { useState, useEffect } from "react";
+import banner from "../../assets/images/badangel/banner2.jpeg";
 import banner2 from "../../assets/images/badangel/bannerV.jpg";
 
 function Main() {
   const productos = getProducts();
 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+
+  const [showHover, setShowHover] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowHover((prev) => !prev);
+    }, 3000); // cambia cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   const [deleteConfirmationModal, setDeleteConfirmationModal] = useState(false);
 
@@ -33,7 +43,7 @@ function Main() {
           <img src={banner2} className="w-full rounded-2xl border-black border-1 mt-2" />
         )}
       </div>
-      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl my-10">
+      <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center sm:text-2xl xl:text-3xl my-10">
         DONDE LO DIVINO Y LO PERVERSO CONVERGEN
       </h2>
       
@@ -46,12 +56,25 @@ function Main() {
           >
             <div className="box">
               <div className="p-5">
-                <div className="h-96 image-fit rounded-md overflow-hidden relative before:block before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-10 before:bg-gradient-to-t before:from-black before:to-black/10">
+                <div className="aspect-[4/6] rounded-md overflow-hidden relative group">
+
+                {/*Imagen Principal */}
                   <img
                     alt={prod.titulo}
-                    className="rounded-md object-cover w-full h-full"
-                    src={prod.imagenHorizontal}
+                    className="rounded-md object-contain w-full h-full transition-opacity duration-500 group-hover:opacity-0"
+                    src={prod.imagenPrincipal}
                   />
+                  {/* Imagen hover */}
+            <img
+              alt={prod.titulo}
+              className="absolute inset-0 rounded-md object-contain w-full h-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+              src={prod.imagenHover}
+            />
+                  {/* Degradado overlay */}
+                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.7)_0%,transparent_50%)]"></div>
+
+
+
                   {prod.oferta ? (
                     <span className="absolute top-0 bg-pending text-white text-lg m-5 px-2 py-1 rounded z-10">
                       OFERTA
@@ -59,10 +82,16 @@ function Main() {
                   ) : (
                     ""
                   )}
-                  <div className="absolute bottom-0 text-white px-5 pb-6 z-10">
-                    <a href="" className="block font-medium text-lg">
+                  <div className="absolute bottom-0  px-5 pb-6 z-10">
+                    <a href="" className="block font-medium text-white sm:text-xl xl:text-2xl">
                       {prod.titulo}
                     </a>
+                    <div className="flex items-center gap-2" >
+                     <Lucide icon="Palette" className="text-white/50" />
+                    <span className="italic text-sm text-white/50">
+                    {prod.color} 
+                    </span>
+                    </div>
                   </div>
                 </div>
                 <div className="text-slate-600 dark:text-slate-500 px-5 mt-5">
@@ -70,14 +99,14 @@ function Main() {
                     {prod.oferta ? (
                       <p>
                         <div className="flex items-center mt-1 mb-3">
-                          <span className=" text-lg italic">
+                          <span className=" xs:text-sm xl:text-base italic">
                             {prod.detalle}
                           </span>
                         </div>
-                        <span className="line-through mr-2">
+                        <span className="line-through mr-2 text-lg">
                           Precio: ${prod.precio}
                         </span>
-                        <span className="text-red-500 font-bold text-lg">
+                        <span className="text-red-500 font-bold text-xl">
                           ${prod.precioOferta}
                         </span>
                       </p>
@@ -88,13 +117,13 @@ function Main() {
                             {prod.detalle}
                           </span>
                         </div>
-                        <span className="font-bold">
+                        <span className="font-bold text-lg">
                           Precio: ${prod.precio}
                         </span>
                       </p>
                     )}
                   </div>
-                  <div className="flex items-center mt-2">
+                  <div className="flex items-center mt-2 text-lg">
                     <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                     Disponibilidad: {prod.disponibilidad}
                   </div>
@@ -185,15 +214,15 @@ function Main() {
         {/* END: Pagination */}
       </div>
       
-      <div className="flex w-full justify-center my-10">
+      <div className="bg-fondoLogos flex w-full justify-center my-10 p-10">
         <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="xs:w-full xl:w-90 h-full object-cover"
           >
-            <source src="assets/video-pasarela-mp4.mp4" type="video/mp4" />
+            <source src='/src/assets/images/badangel/video-pasarela-mp4.mp4' type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
       </div>
