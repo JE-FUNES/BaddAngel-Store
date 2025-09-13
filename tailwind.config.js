@@ -83,6 +83,9 @@ module.exports = {
           900: withOpacityValue("--color-darkmode-900"),
         },
       },
+      backgroundImage: {
+        'videoPasarela': "url('/src/assets/images/badangel/video-pasarela-mp4.mp4')",
+      },
       fontFamily: {
         roboto: ["Roboto"],
       },

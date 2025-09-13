@@ -36,6 +36,7 @@ function Main() {
       <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center text-2xl my-10">
         DONDE LO DIVINO Y LO PERVERSO CONVERGEN
       </h2>
+      
       <div className="grid grid-cols-6 gap-6 mt-5">
         {/* BEGIN: Products Layout */}
         {productos.map((prod) => (
@@ -45,10 +46,10 @@ function Main() {
           >
             <div className="box">
               <div className="p-5">
-                <div className="h-40 2xl:h-56 image-fit rounded-md overflow-hidden before:block before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-10 before:bg-gradient-to-t before:from-black before:to-black/10">
+                <div className="h-96 image-fit rounded-md overflow-hidden relative before:block before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-10 before:bg-gradient-to-t before:from-black before:to-black/10">
                   <img
                     alt={prod.titulo}
-                    className="rounded-md"
+                    className="rounded-md object-cover w-full h-full"
                     src={prod.imagenHorizontal}
                   />
                   {prod.oferta ? (
@@ -183,8 +184,18 @@ function Main() {
         */}
         {/* END: Pagination */}
       </div>
+      
       <div className="flex w-full justify-center my-10">
-        <img src={banner} className="w-full border-black border-1" />
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src="assets/video-pasarela-mp4.mp4" type="video/mp4" />
+            Tu navegador no soporta videos.
+          </video>
       </div>
       <h3 className="text-black dark:text-white font-base justify-center items-center text-center text-xl mb-10">
         Alguna frase corta o detalle importante
