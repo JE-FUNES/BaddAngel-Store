@@ -1,6 +1,6 @@
 // PRODUCTOS
 
-import ART007R from "../assets/images/badangel/productos/buzos/art007r-spike-hoody-rojo.jpg";
+import ART007R from "../assets/images/badangel/productos/buzos/ART007R-SPIKE-HOODY-ROJO.jpg";
 import ART007RE from "../assets/images/badangel/productos/buzos/art007r-spike-hoody-rojo-espalda.jpg";
 
 import ART007B from "../assets/images/badangel/productos/buzos/art007B-spike-hoody-blanco.jpg";
