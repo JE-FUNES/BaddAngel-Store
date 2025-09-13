@@ -13,10 +13,23 @@ import ART007NR from "../assets/images/badangel/productos/buzos/art007nr-spike h
 import ART007NRE from "../assets/images/badangel/productos/buzos/art007nr-spike hoody-negroyrojo-espalda.jpg";
 
 
-// ✅ Listado de productos. Cada prenda con todos los datos requeridos
+import ART004 from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER.jpg";
+import ART004E from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER2.jpg";
+
+import ART003 from "../assets/images/badangel/productos/pantalones/ART003-BAGGY-TRIBAL-FLAME.jpg";
+import ART003E from "../assets/images/badangel/productos/pantalones/ART003-BAGGY-TRIBAL-FLAME2.jpg";
+
+import ART002 from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE.jpg";
+import ART002E from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE2.jpg";
+
+
+
+// Listado de productos. Cada prenda con todos los datos requeridos
+// Alternar el orden de las imagenes principal y hover para que la animacion se muestre en frentes diferentes
 export const products = [
   {
     codigo: "ART007R",
+    categoria: "buzos",
     titulo: "SPIKE HOODY",
     imagenPrincipal: ART007R,
     imagenHover: ART007RE,
@@ -33,9 +46,10 @@ export const products = [
   },
   {
     codigo: "ART007NR",
+    categoria: "buzos",
     titulo: "SPIKE HOODY",
-    imagenPrincipal: ART007NR,
-    imagenHover: ART007NRE,
+    imagenPrincipal: ART007NRE,
+    imagenHover: ART007NR,
     precio: 6400,
     oferta: false,
     precioOferta: null,
@@ -49,6 +63,7 @@ export const products = [
   },
   {
     codigo: "ART007BN",
+    categoria: "buzos",
     titulo: "SPIKE HOODY",
     imagenPrincipal: ART007BN,
     imagenHover: ART007BNE,
@@ -66,9 +81,10 @@ export const products = [
   
   {
     codigo: "ART007B",
+    categoria: "buzos",
     titulo: "SPIKE HOODY",
-    imagenPrincipal: ART007B,
-    imagenHover: ART007BE,
+    imagenPrincipal: ART007BE,
+    imagenHover: ART007B,
     precio: 6400,
     oferta: false,
     precioOferta: null,
@@ -82,12 +98,13 @@ export const products = [
   },
   {
     codigo: "ART004",
+    categoria: "pantalones",
     titulo: "INFERNO JOGGER",
-    imagenPrincipal: ART007NR,
-    //imagenHover: product4V,
+    imagenPrincipal: ART004,
+    imagenHover: ART004E,
     precio: 6400,
     oferta: false,
-    precioOferta: null,
+    precioOferta: 5000,
     talle: "40",
     detalle:
       "Jogger de frisa de algodón peinado, con detalles en bies al corte y estampas laterales. Diseño cómodo y sin bolsillos.",
@@ -98,9 +115,10 @@ export const products = [
   },
   {
     codigo: "ART003",
+    categoria: "pantalones",
     titulo: "BAGGY TRIBAL FLAME",
-    imagenPrincipal: ART007NR,
-    //imagenHover: product3V,
+    imagenPrincipal: ART003E,
+    imagenHover: ART003,
     precio: 9800,
     oferta: true,
     precioOferta: 7200,
@@ -114,9 +132,10 @@ export const products = [
   },
  {
     codigo: "ART002",
+    categoria: "pantalones",
     titulo: "LEATHER SPIKE",
-    imagenPrincipal: ART007BN,
-    //imagenHover: product2V,
+    imagenPrincipal: ART002,
+    imagenHover: ART002E,
     precio: 7500,
     oferta: false,
     precioOferta: null,
@@ -126,11 +145,12 @@ export const products = [
     disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "Cuerina elastizada",
-    color: "negro con estampas",
+    color: "negro con tribales blancos",
   },
     
   {
     codigo: "ART005",
+    categoria: "tops",
     titulo: "TOP DEAD TRIBAL",
     imagenPrincipal: ART007NR,
     //imagenHover: product4V,
@@ -147,6 +167,7 @@ export const products = [
   },
     {
     codigo: "ART006",
+    categoria: "tops",
     titulo: "TOP DEAD TOUCH",
     imagenPrincipal: ART007NR,
     //imagenHover: product4V,
@@ -163,6 +184,7 @@ export const products = [
   },
   {
     codigo: "ART001",
+    categoria: "faldas",
     titulo: "CRUCIFIX MINI SKIRT",
     imagenPrincipal: ART007R,
     //imagenHover: product1V,
@@ -180,6 +202,7 @@ export const products = [
   
    {
     codigo: "ART008",
+    categoria: "bolsos",
     titulo: "SPIKY MINI BAG",
     imagenPrincipal: ART007NR,
     //imagenHover: product4V,
@@ -195,6 +218,7 @@ export const products = [
     color: "blanco con estampas",
   },
 ];
+
 
 // ✅ Exportar una función que devuelva el listado
 export const faker = () => {
