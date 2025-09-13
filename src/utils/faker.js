@@ -1,16 +1,16 @@
 // PRODUCTOS
 
-import ART007R from "../assets/images/badangel/productos/buzos/art007r-spike hoody-rojo.jpg";
-import ART007RE from "../assets/images/badangel/productos/buzos/art007r-spike hoody-rojo-espalda.jpg";
+import ART007R from "../assets/images/badangel/productos/buzos/art007r-spike-hoody-rojo.jpg";
+import ART007RE from "../assets/images/badangel/productos/buzos/art007r-spike-hoody-rojo-espalda.jpg";
 
-import ART007B from "../assets/images/badangel/productos/buzos/art007B-spike hoody-blanco.jpg";
-import ART007BE from "../assets/images/badangel/productos/buzos/art007B-spike hoody-blanco-espalda.jpg";
+import ART007B from "../assets/images/badangel/productos/buzos/art007B-spike-hoody-blanco.jpg";
+import ART007BE from "../assets/images/badangel/productos/buzos/art007B-spike-hoody-blanco-espalda.jpg";
 
-import ART007BN from "../assets/images/badangel/productos/buzos/art007nB-spike hoody-negroyblanco.jpg";
-import ART007BNE from "../assets/images/badangel/productos/buzos/art007nB-spike hoody-negroyblanco-espalda.jpg";
+import ART007BN from "../assets/images/badangel/productos/buzos/art007nB-spike-hoody-negroyblanco.jpg";
+import ART007BNE from "../assets/images/badangel/productos/buzos/art007nB-spike-hoody-negroyblanco-espalda.jpg";
 
-import ART007NR from "../assets/images/badangel/productos/buzos/art007nr-spike hoody-negroyrojo.jpg";
-import ART007NRE from "../assets/images/badangel/productos/buzos/art007nr-spike hoody-negroyrojo-espalda.jpg";
+import ART007NR from "../assets/images/badangel/productos/buzos/art007nr-spike-hoody-negroyrojo.jpg";
+import ART007NRE from "../assets/images/badangel/productos/buzos/art007nr-spike-hoody-negroyrojo-espalda.jpg";
 
 
 import ART004 from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER.jpg";
