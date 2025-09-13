@@ -14,9 +14,9 @@ import classnames from "classnames";
 import { useState, useEffect } from "react";
 import banner from "../../assets/images/badangel/banner2.jpeg";
 import banner2 from "../../assets/images/badangel/bannerV.jpg";
-import tituloBuzos from "../../assets/images/badangel/productos/buzos/titulo-buzos-dark.jpg";
+import tituloBuzos from "../../assets/images/badangel/productos/buzos/TITULO-BUZOS-dark.jpg";
 import tituloTops from "../../assets/images/badangel/productos/tops/titulo-tops.jpg";
-import tituloPantalones from "../../assets/images/badangel/productos/buzos/titulo-pantalones-dark.jpg";
+import tituloPantalones from "../../assets/images/badangel/productos/buzos/TITULO-PANTALONES-dark.jpg";
 
 function Main() {
   const productos = getProducts();
