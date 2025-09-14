@@ -25,7 +25,8 @@ import ART002E from "../assets/images/badangel/productos/pantalones/ART002-LEATH
 import ART008 from "../assets/images/badangel/productos/bolsos/bolso-1.jpg";
 import ART008E from "../assets/images/badangel/productos/bolsos/bolso-2.jpg";
 
-
+import ART001 from "../assets/images/badangel/productos/faldas/1.jpg";
+import ART001E from "../assets/images/badangel/productos/faldas/2.jpg";
 
 // Listado de productos. Cada prenda con todos los datos requeridos
 // Alternar el orden de las imagenes principal y hover para que la animacion se muestre en frentes diferentes
@@ -155,8 +156,8 @@ export const products = [
     codigo: "ART005",
     categoria: "tops",
     titulo: "TOP DEAD TRIBAL",
-    imagenPrincipal: ART007NR,
-    //imagenHover: product4V,
+    imagenPrincipal: ART001,
+    imagenHover: ART001E,
     precio: 6400,
     oferta: false,
     precioOferta: null,
@@ -172,8 +173,8 @@ export const products = [
     codigo: "ART006",
     categoria: "tops",
     titulo: "TOP DEAD TOUCH",
-    imagenPrincipal: ART007NR,
-    //imagenHover: product4V,
+    imagenPrincipal: ART001,
+    imagenHover: ART001E,
     precio: 6400,
     oferta: false,
     precioOferta: null,
@@ -189,8 +190,8 @@ export const products = [
     codigo: "ART001",
     categoria: "tops",
     titulo: "CRUCIFIX MINI SKIRT",
-    imagenPrincipal: ART007R,
-    //imagenHover: product1V,
+    imagenPrincipal: ART001,
+    imagenHover: ART001E,
     precio: 12000,
     oferta: true,
     precioOferta: 8900,

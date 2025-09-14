@@ -364,11 +364,11 @@ function Main() {
             >
               <div className="box">
                 <div className="p-5">
-                  <div className="aspect-[4/6] rounded-md overflow-hidden relative group">
+                  <div className="aspect-[9/5] rounded-md overflow-hidden relative group">
                     {/*Imagen Principal */}
                     <img
                       alt={prod.titulo}
-                      className={`absolute inset-0 rounded-md object-contain w-full h-full transition-opacity duration-700 ${
+                      className={`absolute inset-0 rounded-md object-cover object-bottom w-full h-full transition-opacity duration-700 ${
                         showHover ? "opacity-0" : "opacity-100"
                       }`}
                       src={prod.imagenPrincipal}
@@ -376,7 +376,7 @@ function Main() {
                     {/* Imagen hover */}
                     <img
                       alt={prod.titulo}
-                      className={`absolute inset-0 rounded-md object-contain w-full h-full transition-opacity duration-700 ${
+                      className={`absolute inset-0 rounded-md object-cover object-bottom w-full h-full transition-opacity duration-700 ${
                         showHover ? "opacity-100" : "opacity-0"
                       }`}
                       src={prod.imagenHover}
@@ -455,14 +455,14 @@ function Main() {
           className="xs:w-full xl:w-90 h-full object-cover"
         >
           <source
-            src="video-pasarela-mp4.mp4"
+            src="/video-pasarela-mp4.mp4"
             type="video/mp4"
           />
           Tu navegador no soporta videos.
         </video>
       </div>
       <h3 className="text-black dark:text-white font-base justify-center items-center text-center text-xl mb-10">
-        Alguna frase corta o detalle importante
+        
       </h3>
       {/* BEGIN: Delete Confirmation Modal */}
       <Modal
