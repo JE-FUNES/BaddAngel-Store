@@ -42,20 +42,29 @@ function Main() {
         {isLargeScreen ? (
           <img src={banner} className="w-full border-black border-1" />
         ) : (
-          <img
-            src={banner2}
-            className="w-full rounded-2xl border-black border-1 mt-2"
+          <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover rounded-2xl"
+        >
+          <source
+            src="/animacion-init.mp4"
+            type="video/mp4"
           />
+          Tu navegador no soporta videos.
+        </video>
         )}
       </div>
       <h2 className="text-black dark:text-white font-semibold justify-center items-center text-center sm:text-2xl xl:text-3xl my-10">
         DONDE LO DIVINO Y LO PERVERSO CONVERGEN
       </h2>
       <div className="flex justify-center">
-        <img src={tituloBuzos} className="mb-10 mt-20" />
+        <img src={tituloBuzos} className="mb-10 xl:mt-20" />
       </div>
 
-      <div className="grid grid-cols-6 gap-6 mt-5">
+      <div className="grid grid-cols-12 gap-6 xl:mt-5">
         {/* BEGIN: Products Layout */}
 
         {/* BUZOS */}
@@ -150,7 +159,7 @@ function Main() {
           ))}
       </div>
       <div className="flex justify-center">
-        <img src={tituloPantalones} className="mb-10 mt-20" />
+        <img src={tituloPantalones} className="mb-5 xl:mb-10 mt-10 xl:mt-20" />
       </div>
 
       <div className="grid grid-cols-12 gap-6 mt-5">
@@ -249,7 +258,7 @@ function Main() {
       </div>
 
       <div className="flex justify-center">
-        <img src={tituloTops} className="mb-10 mt-20" />
+        <img src={tituloTops} className="mb-5 xl:mb-10 mt-10 xl:mt-20" />
       </div>
 
       <div className="grid grid-cols-12 gap-6 mt-5">
@@ -348,7 +357,7 @@ function Main() {
       </div>
 
       <div className="flex justify-center">
-        <img src={tituloBolsos} className="mb-10 mt-20" />
+        <img src={tituloBolsos} className="mb-5 xl:mb-10 mt-10 xl:mt-20" />
       </div>
 
       <div className="grid grid-cols-12 gap-6 mt-5">
@@ -461,9 +470,18 @@ function Main() {
           Tu navegador no soporta videos.
         </video>
       </div>
-      <h3 className="text-black dark:text-white font-base justify-center items-center text-center text-xl mb-10">
+      {isLargeScreen ? "" : (
         
-      </h3>
+        <h4 className="text-black dark:text-white justify-center items-center text-center text-sm mt-5">
+         Badd Angel ©2025 - 
+          <a href="https://www.jefa-web.com.ar" >
+          <span>
+            Sitio diseñado por J.E.F.A. web
+            </span>
+      </a> 
+      </h4>
+    )
+            }
       {/* BEGIN: Delete Confirmation Modal */}
       <Modal
         show={deleteConfirmationModal}
