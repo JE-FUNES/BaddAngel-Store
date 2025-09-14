@@ -1,32 +1,32 @@
 // PRODUCTOS
 
-import ART007R from "../assets/images/badangel/productos/buzos/ART007R-SPIKE-HOODY-ROJO.jpg";
-import ART007RE from "../assets/images/badangel/productos/buzos/ART007R-SPIKE-HOODY-ROJO-espalda.jpg";
+import ART007R from "../assets/images/badangel/productos/buzos/ART007R-SPIKE-HOODY-ROJO.webp";
+import ART007RE from "../assets/images/badangel/productos/buzos/ART007R-SPIKE-HOODY-ROJO-espalda.webp";
 
-import ART007B from "../assets/images/badangel/productos/buzos/ART007B-SPIKE-HOODY-blanco.jpg";
-import ART007BE from "../assets/images/badangel/productos/buzos/ART007B-SPIKE-HOODY-blanco-espalda.jpg";
+import ART007B from "../assets/images/badangel/productos/buzos/ART007B-SPIKE-HOODY-blanco.webp";
+import ART007BE from "../assets/images/badangel/productos/buzos/ART007B-SPIKE-HOODY-blanco-espalda.webp";
 
-import ART007BN from "../assets/images/badangel/productos/buzos/ART007NB-SPIKE-HOODY-NEGROYBLANCO.jpg";
-import ART007BNE from "../assets/images/badangel/productos/buzos/ART007NB-SPIKE-HOODY-NEGROYBLANCO-espalda.jpg";
+import ART007BN from "../assets/images/badangel/productos/buzos/ART007NB-SPIKE-HOODY-NEGROYBLANCO.webp";
+import ART007BNE from "../assets/images/badangel/productos/buzos/ART007NB-SPIKE-HOODY-NEGROYBLANCO-espalda.webp";
 
-import ART007NR from "../assets/images/badangel/productos/buzos/ART007NR-SPIKE-HOODY-NEGROYROJO.jpg";
-import ART007NRE from "../assets/images/badangel/productos/buzos/ART007NR-SPIKE-HOODY-NEGROYROJO-espalda.jpg";
+import ART007NR from "../assets/images/badangel/productos/buzos/ART007NR-SPIKE-HOODY-NEGROYROJO.webp";
+import ART007NRE from "../assets/images/badangel/productos/buzos/ART007NR-SPIKE-HOODY-NEGROYROJO-espalda.webp";
 
 
-import ART004 from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER.jpg";
-import ART004E from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER2.jpg";
+import ART004 from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER.webp";
+import ART004E from "../assets/images/badangel/productos/pantalones/ART004-INFERNO-JOGGER2.webp";
 
-import ART003 from "../assets/images/badangel/productos/pantalones/ART003-BAGGY-TRIBAL-FLAME.jpg";
-import ART003E from "../assets/images/badangel/productos/pantalones/ART003-BAGGY-TRIBAL-FLAME2.jpg";
+import ART003 from "../assets/images/badangel/productos/pantalones/ART003-BAGGY-TRIBAL-FLAME.webp";
+import ART003E from "../assets/images/badangel/productos/pantalones/ART003-BAGGY-TRIBAL-FLAME2.webp";
 
-import ART002 from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE.jpg";
-import ART002E from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE2.jpg";
+import ART002 from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE.webp";
+import ART002E from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE2.webp";
 
-import ART008 from "../assets/images/badangel/productos/bolsos/bolso-1.jpg";
-import ART008E from "../assets/images/badangel/productos/bolsos/bolso-2.jpg";
+import ART008 from "../assets/images/badangel/productos/bolsos/bolso-1.webp";
+import ART008E from "../assets/images/badangel/productos/bolsos/bolso-2.webp";
 
-import ART001 from "../assets/images/badangel/productos/faldas/1.jpg";
-import ART001E from "../assets/images/badangel/productos/faldas/2.jpg";
+import ART001 from "../assets/images/badangel/productos/faldas/1.webp";
+import ART001E from "../assets/images/badangel/productos/faldas/2.webp";
 
 // Listado de productos. Cada prenda con todos los datos requeridos
 // Alternar el orden de las imagenes principal y hover para que la animacion se muestre en frentes diferentes

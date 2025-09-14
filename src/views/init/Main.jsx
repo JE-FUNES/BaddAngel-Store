@@ -38,7 +38,7 @@ function Main() {
 
   return (
     <>
-      <div className="flex w-full justify-center xs:mb-6 xl:mb-10 mt-2">
+      <div className="flex w-full justify-center xs:mb-6 xl:mb-10 mt-4 xl:mt-2">
         {isLargeScreen ? (
           <img src={banner} className="w-full border-black border-1" />
         ) : (
@@ -455,7 +455,7 @@ function Main() {
           ))}
       </div>
 
-      <div className="bg-fondoLogos flex w-full justify-center my-10 p-10">
+      <div className="bg-fondoLogos flex w-full justify-center my-10 p-5 xl:p-10">
         <video
           autoPlay
           loop
