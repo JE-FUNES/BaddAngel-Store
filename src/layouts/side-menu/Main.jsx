@@ -27,12 +27,12 @@ function Main() {
 
   return (
     <div className="py-5 md:py-0">
-      
       {/*<MainColorSwitcher />*/}
       <MobileMenu />
       <TopBar />
       <div className="flex overflow-hidden">
         {/* BEGIN: Side Menu */}
+      
         <nav className="side-nav">
           <ul>
             {/* BEGIN: First Child */}
