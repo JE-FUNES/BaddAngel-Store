@@ -455,21 +455,7 @@ function Main() {
           ))}
       </div>
 
-      <div className="bg-fondoLogos flex w-full justify-center my-10 p-5 xl:p-10">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="xs:w-full xl:w-90 h-full object-cover"
-        >
-          <source
-            src="/video-pasarela-mp4.mp4"
-            type="video/mp4"
-          />
-          Tu navegador no soporta videos.
-        </video>
-      </div>
+      
       {isLargeScreen ? "" : (
         
         <h4 className="text-black dark:text-white justify-center items-center text-center text-sm mt-5">
