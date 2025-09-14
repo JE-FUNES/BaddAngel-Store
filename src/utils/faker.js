@@ -22,6 +22,9 @@ import ART003E from "../assets/images/badangel/productos/pantalones/ART003-BAGGY
 import ART002 from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE.jpg";
 import ART002E from "../assets/images/badangel/productos/pantalones/ART002-LEATHER-SPIKE2.jpg";
 
+import ART008 from "../assets/images/badangel/productos/bolsos/bolso-1.jpg";
+import ART008E from "../assets/images/badangel/productos/bolsos/bolso-2.jpg";
+
 
 
 // Listado de productos. Cada prenda con todos los datos requeridos
@@ -111,7 +114,7 @@ export const products = [
     disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% algodón",
-    color: "rojo con estampas",
+    color: "rojo con detalles negros",
   },
   {
     codigo: "ART003",
@@ -184,7 +187,7 @@ export const products = [
   },
   {
     codigo: "ART001",
-    categoria: "faldas",
+    categoria: "tops",
     titulo: "CRUCIFIX MINI SKIRT",
     imagenPrincipal: ART007R,
     //imagenHover: product1V,
@@ -204,8 +207,8 @@ export const products = [
     codigo: "ART008",
     categoria: "bolsos",
     titulo: "SPIKY MINI BAG",
-    imagenPrincipal: ART007NR,
-    //imagenHover: product4V,
+    imagenPrincipal: ART008,
+    imagenHover: ART008E,
     precio: 6400,
     oferta: false,
     precioOferta: null,
@@ -215,7 +218,7 @@ export const products = [
     disponibilidad: "Stock Limitado",
     coleccion: "",
     material: "100% poliéster elastizado",
-    color: "blanco con estampas",
+    color: "negro con tribales rojos y blancos",
   },
 ];
 
