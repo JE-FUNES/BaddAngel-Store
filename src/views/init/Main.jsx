@@ -18,9 +18,14 @@ import tituloBuzos from "../../assets/images/badangel/productos/buzos/TITULO-BUZ
 import tituloTops from "../../assets/images/badangel/productos/tops/titulo-tops.jpg";
 import tituloPantalones from "../../assets/images/badangel/productos/buzos/TITULO-PANTALONES-dark.jpg";
 import tituloBolsos from "../../assets/images/badangel/productos/bolsos/titulo-bags.jpg";
+import ProductsModal from "./ModalProductos";
 
 function Main() {
   const productos = getProducts();
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const closeComponent = () => {
+    setSelectedProduct(null);
+  };
 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
 
@@ -72,6 +77,7 @@ function Main() {
               <div
                 key={prod.codigo}
                 className="intro-y col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3"
+                onClick={() => setSelectedProduct(prod)}
               >
                 <div className="box">
                   <div className="p-5">
@@ -468,42 +474,11 @@ function Main() {
           </a>
         </h4>
       )}
-      {/* BEGIN: Delete Confirmation Modal */}
-      <Modal
-        show={deleteConfirmationModal}
-        onHidden={() => {
-          setDeleteConfirmationModal(false);
-        }}
-      >
-        <ModalBody className="p-0">
-          <div className="p-5 text-center">
-            <Lucide
-              icon="XCircle"
-              className="w-16 h-16 text-danger mx-auto mt-3"
-            />
-            <div className="text-3xl mt-5">Are you sure?</div>
-            <div className="text-slate-500 mt-2">
-              Do you really want to delete these records? <br />
-              This process cannot be undone.
-            </div>
-          </div>
-          <div className="px-5 pb-8 text-center">
-            <button
-              type="button"
-              onClick={() => {
-                setDeleteConfirmationModal(false);
-              }}
-              className="btn btn-outline-secondary w-24 mr-1"
-            >
-              Cancel
-            </button>
-            <button type="button" className="btn btn-danger w-24">
-              Delete
-            </button>
-          </div>
-        </ModalBody>
-      </Modal>
-      {/* END: Delete Confirmation Modal */}
+      {/* BEGIN: Products Modal */}
+      {selectedProduct && (
+        <ProductsModal product={selectedProduct} onClose={closeComponent} />
+      )}
+      {/* END: Products Modal */}
     </>
   );
 }
