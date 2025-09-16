@@ -64,12 +64,12 @@ const sideMenu = atom({
         external: false,
       },
 
-      {
+      /*{
         icon: "HelpCircle",
         title: "FAQ",
         pathname: "/faq-layout-1",
         external: false,
-      },
+      },*/
       {
         icon: "User",
         title: "About",
