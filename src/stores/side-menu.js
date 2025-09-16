@@ -73,7 +73,7 @@ const sideMenu = atom({
       {
         icon: "User",
         title: "About",
-        pathname: "/faq-layout-1",
+        pathname: "/about",
         external: false,
       },
     ],
