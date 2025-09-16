@@ -5,7 +5,12 @@ function ProductsModal({ product, onClose }) {
   if (!product) return null;
 
   return (
-    <Modal show={!!product} onHidden={onClose}>
+    <Modal 
+    show={!!product} 
+     onHidden={onClose}              // <-- ahora se ejecuta al cerrarse
+      staticBackdrop={false}         // <-- asegura que no bloquee scroll
+      key={product.codigo}  
+      >
       <ModalBody className="p-6">
         {/* Botón de cierre */}
         <button

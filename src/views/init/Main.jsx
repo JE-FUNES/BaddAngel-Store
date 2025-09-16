@@ -1,12 +1,5 @@
 import {
-  Lucide,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownContent,
-  DropdownItem,
-  Modal,
-  ModalBody,
+  Lucide
 } from "@/base-components";
 import { faker as getProducts } from "@/utils";
 import * as $_ from "lodash";
@@ -156,6 +149,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
+                       <div className="flex items-center mt-2 text-lg cursor-pointer"
+                      onClick={() => setSelectedProduct(prod)}>
+                        Ver más 
+                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -259,6 +258,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
+                       <div className="flex items-center mt-2 text-lg cursor-pointer"
+                      onClick={() => setSelectedProduct(prod)}>
+                        Ver más 
+                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -359,6 +364,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
+                       <div className="flex items-center mt-2 text-lg cursor-pointer"
+                      onClick={() => setSelectedProduct(prod)}>
+                        Ver más 
+                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -455,6 +466,12 @@ function Main() {
                       <div className="flex items-center mt-2 text-lg">
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
+                      </div>
+                      <div className="flex items-center mt-2 text-lg cursor-pointer"
+                      onClick={() => setSelectedProduct(prod)}>
+                        Ver más 
+                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
+                        
                       </div>
                     </div>
                   </div>
