@@ -59,7 +59,7 @@ function Main() {
       </h2>
       <section id="buzos">
         <div className="flex justify-center">
-          <img src={tituloBuzos} className="mb-10 xl:mt-24" />
+          <img src={tituloBuzos} className="mb-3 mt-20 xl:mt-24" />
         </div>
 
         <div className="grid grid-cols-12 gap-6 xl:mt-5">
@@ -161,7 +161,7 @@ function Main() {
         <div className="flex justify-center">
           <img
             src={tituloPantalones}
-            className="mb-5 xl:mb-10 mt-10 xl:mt-24"
+            className="mb-3 xl:mb-10 mt-20 xl:mt-24"
           />
         </div>
 
@@ -262,7 +262,7 @@ function Main() {
       </section>
       <section id="tops">
         <div className="flex justify-center">
-          <img src={tituloTops} className="mb-5 xl:mb-10 mt-10 xl:mt-24" />
+          <img src={tituloTops} className="mb-3 xl:mb-10 mt-20 xl:mt-24" />
         </div>
 
         <div className="grid grid-cols-12 gap-6 mt-5">
@@ -362,7 +362,7 @@ function Main() {
       </section>
       <section id="bolsos">
         <div className="flex justify-center">
-          <img src={tituloBolsos} className="mb-5 xl:mb-10 mt-10 xl:mt-24" />
+          <img src={tituloBolsos} className="mb-3 xl:mb-10 mt-20 xl:mt-24" />
         </div>
 
         <div className="grid grid-cols-12 gap-6 mt-5">
