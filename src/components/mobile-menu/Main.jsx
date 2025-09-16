@@ -82,12 +82,15 @@ function Main(props) {
                 <li key={menu + menuKey}>
                   <a
                     href={menu.subMenu ? "#" : menu.pathname}
+                    target={menu.external ? "_blank" : undefined}
+                    rel={menu.external ? "noopener noreferrer" : undefined}
                     className={classnames({
                       menu: true,
                       "menu--active": menu.active,
                       "menu--open": menu.activeDropdown,
                     })}
                     onClick={(event) => {
+                      if (menu.external) return;
                       event.preventDefault();
                       linkTo(menu, navigate, setActiveMobileMenu);
                       setFormattedMenu($h.toRaw(formattedMenu));
