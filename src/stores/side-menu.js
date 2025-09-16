@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 
+
 const sideMenu = atom({
   key: "sideMenu",
   default: {
@@ -8,31 +9,36 @@ const sideMenu = atom({
         icon: "Home",
         title: "Inicio",
         pathname: "/",
+        external: false,
       },
 
       {
-        icon: "ShoppingBag",
+        icon: "Layers",
         title: "Productos",
         subMenu: [
           {
-            icon: "Palette",
+            icon: "Shirt",
             title: "Buzos",
-            pathname: "/categories",
+            pathname: "/#buzos",
+            external: false,
           },
           {
-            icon: "Palette",
+            icon: "StretchVertical",
             title: "Pantalones",
-            pathname: "/add-product",
+            pathname: "/#pantalones",
+            external: false,
           },
           {
-            icon: "Palette",
+            icon: "Triangle",
             title: "Faldas y Tops",
-            pathname: "/categories",
+            pathname: "/#tops",
+            external: false,
           },
           {
-            icon: "Palette",
+            icon: "ShoppingBag",
             title: "Bolsos",
-            pathname: "/add-product",
+            pathname: "/#bolsos",
+            external: false,
           },
         ],
       },
@@ -40,29 +46,35 @@ const sideMenu = atom({
       {
         icon: "MessageCircle",
         title: "Whatsapp",
-        pathname: "/chat",
+        pathname: "https://wa.me/5493512920713",
+        external: true,
       },
+
       {
         icon: "Instagram",
         title: "Instagram",
-        pathname: "/chat",
+        pathname: "https://www.instagram.com/baddangel.store",
+        external: true,
       },
       "devider",
       {
         icon: "CreditCard",
         title: "Formas de Pago",
         pathname: "/point-of-sale",
+        external: false,
       },
 
       {
-        icon: "Layers",
+        icon: "HelpCircle",
         title: "FAQ",
         pathname: "/faq-layout-1",
+        external: false,
       },
       {
-        icon: "Sun",
+        icon: "User",
         title: "About",
         pathname: "/faq-layout-1",
+        external: false,
       },
     ],
   },

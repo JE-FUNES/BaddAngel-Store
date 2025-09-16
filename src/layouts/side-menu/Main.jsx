@@ -12,6 +12,8 @@ import MobileMenu from "@/components/mobile-menu/Main";
 //import MainColorSwitcher from "@/components/main-color-switcher/Main";
 
 import SideMenuTooltip from "@/components/side-menu-tooltip/Main";
+import ScrollToHashElement from "./scroll";
+
 
 function Main() {
   const navigate = useNavigate();
@@ -47,12 +49,15 @@ function Main() {
                     tag="a"
                     content={menu.title}
                     href={menu.subMenu ? "#" : menu.pathname}
+                    target={menu.external ? "_blank" : undefined}
+                    rel={menu.external ? "noopener noreferrer" : undefined}
                     className={classnames({
                       "side-menu": true,
                       "side-menu--active": menu.active,
                       "side-menu--open": menu.activeDropdown,
                     })}
                     onClick={(event) => {
+                      if (menu.external) return;
                       event.preventDefault();
                       linkTo(menu, navigate);
                       setFormattedMenu($h.toRaw(formattedMenu));
@@ -105,7 +110,7 @@ function Main() {
                               }}
                             >
                               <div className="side-menu__icon">
-                                <Lucide icon="Activity" />
+                                <Lucide icon={subMenu.icon} />
                               </div>
                               <div className="side-menu__title">
                                 {subMenu.title}
@@ -187,6 +192,7 @@ function Main() {
         {/* BEGIN: Content */}
         <div className="content">
           <Outlet />
+           <ScrollToHashElement />
         </div>
         {/* END: Content */}
       </div>
