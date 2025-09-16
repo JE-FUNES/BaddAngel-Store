@@ -6,6 +6,7 @@ function ProductsModal({ product, show, onClose }) {
   if (!product) return null;
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
 
   // Reiniciar al abrir un nuevo producto
   useEffect(() => {
@@ -15,7 +16,7 @@ function ProductsModal({ product, show, onClose }) {
   return (
     <Modal
       show={show}
-      onHidden={onClose} // <-- ahora se ejecuta al cerrarse
+      onHidden={onClose}
     >
       <ModalBody className="p-6">
         {/* Botón de cierre */}
@@ -152,7 +153,8 @@ function ProductsModal({ product, show, onClose }) {
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition"
             >
-              Consultá por este modelo
+                {isLargeScreen ? "Consultar" : "Consultá por este modelo"}
+              
             </a>
           </div>
         </div>
