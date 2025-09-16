@@ -59,8 +59,8 @@ const sideMenu = atom({
       "devider",
       {
         icon: "CreditCard",
-        title: "Formas de Pago",
-        pathname: "/point-of-sale",
+        title: "Pago y Envíos",
+        pathname: "/pagosyenvios",
         external: false,
       },
 

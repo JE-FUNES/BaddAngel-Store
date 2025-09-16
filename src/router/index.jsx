@@ -70,6 +70,7 @@ import Slider from "../views/slider/Main";
 import ImageZoom from "../views/image-zoom/Main";
 import Init from "../views/init/Main";
 import About from "../views/about/Main";
+import Pagos from "../views/pagos/Main";
 
 function Router() {
   const routes = [
@@ -88,8 +89,8 @@ function Router() {
         },
         
         {
-          path: "categories",
-          element: <Categories />,
+          path: "pagosyenvios",
+          element: <Pagos />,
         },
         {
           path: "add-product",
