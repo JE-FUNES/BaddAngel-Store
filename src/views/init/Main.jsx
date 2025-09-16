@@ -1,6 +1,4 @@
-import {
-  Lucide
-} from "@/base-components";
+import { Lucide } from "@/base-components";
 import { faker as getProducts } from "@/utils";
 import * as $_ from "lodash";
 import classnames from "classnames";
@@ -16,7 +14,13 @@ import ProductsModal from "./ModalProductos";
 function Main() {
   const productos = getProducts();
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
   const closeComponent = () => {
+    setIsModalOpen(false);
     setSelectedProduct(null);
   };
 
@@ -31,8 +35,6 @@ function Main() {
 
     return () => clearInterval(interval);
   }, []);
-
-  const [deleteConfirmationModal, setDeleteConfirmationModal] = useState(false);
 
   return (
     <>
@@ -70,7 +72,7 @@ function Main() {
               <div
                 key={prod.codigo}
                 className="intro-y col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3"
-                onClick={() => setSelectedProduct(prod)}
+                onClick={() => openModal(prod)}
               >
                 <div className="box">
                   <div className="p-5">
@@ -122,7 +124,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="line-through mr-2 text-lg">
@@ -136,7 +138,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" text-lg italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="font-bold text-lg">
@@ -149,11 +151,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
-                       <div className="flex items-center mt-2 text-lg cursor-pointer"
-                      onClick={() => setSelectedProduct(prod)}>
-                        Ver más 
+                      <div
+                        className="flex items-center mt-2 text-lg cursor-pointer"
+                        onClick={() => openModal(prod)}
+                      >
+                        Ver más
                         <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                        
                       </div>
                     </div>
                   </div>
@@ -180,6 +183,7 @@ function Main() {
               <div
                 key={prod.codigo}
                 className="intro-y col-span-12 lg:col-span-4"
+                onClick={() => openModal(prod)}
               >
                 <div className="box">
                   <div className="p-5">
@@ -231,7 +235,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="line-through mr-2 text-lg">
@@ -245,7 +249,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" text-lg italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="font-bold text-lg">
@@ -258,11 +262,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
-                       <div className="flex items-center mt-2 text-lg cursor-pointer"
-                      onClick={() => setSelectedProduct(prod)}>
-                        Ver más 
+                      <div
+                        className="flex items-center mt-2 text-lg cursor-pointer"
+                        onClick={() => openModal(prod)}
+                      >
+                        Ver más
                         <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                        
                       </div>
                     </div>
                   </div>
@@ -286,6 +291,7 @@ function Main() {
               <div
                 key={prod.codigo}
                 className="intro-y col-span-12 lg:col-span-4"
+                onClick={() => openModal(prod)}
               >
                 <div className="box">
                   <div className="p-5">
@@ -337,7 +343,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="line-through mr-2 text-lg">
@@ -351,7 +357,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" text-lg italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="font-bold text-lg">
@@ -364,11 +370,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
-                       <div className="flex items-center mt-2 text-lg cursor-pointer"
-                      onClick={() => setSelectedProduct(prod)}>
-                        Ver más 
+                      <div
+                        className="flex items-center mt-2 text-lg cursor-pointer"
+                        onClick={() => openModal(prod)}
+                      >
+                        Ver más
                         <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                        
                       </div>
                     </div>
                   </div>
@@ -389,7 +396,11 @@ function Main() {
           {productos
             .filter((prod) => prod.categoria === "bolsos")
             .map((prod) => (
-              <div key={prod.codigo} className="intro-y col-span-12 ">
+              <div
+                key={prod.codigo}
+                className="intro-y col-span-12 "
+                onClick={() => openModal(prod)}
+              >
                 <div className="box">
                   <div className="p-5">
                     <div className="aspect-[9/5] rounded-md overflow-hidden relative group">
@@ -440,7 +451,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="line-through mr-2 text-lg">
@@ -454,7 +465,7 @@ function Main() {
                           <p>
                             <div className="flex items-center mt-1 mb-3">
                               <span className=" text-lg italic">
-                                {prod.detalle}
+                                {prod.detalle1}
                               </span>
                             </div>
                             <span className="font-bold text-lg">
@@ -467,11 +478,12 @@ function Main() {
                         <Lucide icon="Layers" className="w-4 h-4 mr-2" />
                         Disponibilidad: {prod.disponibilidad}
                       </div>
-                      <div className="flex items-center mt-2 text-lg cursor-pointer"
-                      onClick={() => setSelectedProduct(prod)}>
-                        Ver más 
+                      <div
+                        className="flex items-center mt-2 text-lg cursor-pointer"
+                        onClick={() => openModal(prod)}
+                      >
+                        Ver más
                         <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                        
                       </div>
                     </div>
                   </div>
@@ -492,8 +504,11 @@ function Main() {
         </h4>
       )}
       {/* BEGIN: Products Modal */}
-      {selectedProduct && (
-        <ProductsModal product={selectedProduct} onClose={closeComponent} />
+      {isModalOpen && selectedProduct && (
+        <ProductsModal 
+        product={selectedProduct} 
+        show={isModalOpen}
+        onClose={closeComponent} />
       )}
       {/* END: Products Modal */}
     </>
