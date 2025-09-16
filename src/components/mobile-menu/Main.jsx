@@ -11,6 +11,7 @@ import classnames from "classnames";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import SimpleBar from "simplebar";
 import logoUrl from "../../assets/images/badangel/logo-menu.png";
+import ScrollToHashElement from "../../layouts/side-menu/scroll";
 
 function Main(props) {
   const navigate = useNavigate();
@@ -137,7 +138,7 @@ function Main(props) {
                               }}
                             >
                               <div className="menu__icon">
-                                <Lucide icon="Activity" />
+                                <Lucide icon={subMenu.icon} />
                               </div>
                               <div className="menu__title">
                                 {subMenu.title}

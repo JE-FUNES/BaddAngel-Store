@@ -30,6 +30,7 @@ function Main() {
   return (
     <div className="py-5 md:py-0">
       <MobileMenu />
+      <ScrollToHashElement />
       <TopBar />
       <div className="flex overflow-hidden">
         {/* BEGIN: Side Menu */}
