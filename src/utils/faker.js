@@ -28,6 +28,15 @@ import ART008E from "../assets/images/badangel/productos/bolsos/bolso-2.webp";
 import ART001 from "../assets/images/badangel/productos/faldas/1.webp";
 import ART001E from "../assets/images/badangel/productos/faldas/2.webp";
 
+import ART005 from "../assets/images/badangel/productos/tops/1-1.webp";
+import ART005E from "../assets/images/badangel/productos/tops/1-2.webp";
+import ART005S1 from "../assets/images/badangel/productos/tops/1-espaldaV.webp";
+import ART005S2 from "../assets/images/badangel/productos/tops/1-frenteV.webp";
+
+import ART006 from "../assets/images/badangel/productos/tops/2-1.webp";
+import ART006E from "../assets/images/badangel/productos/tops/2-2.webp";
+import ART006S1 from "../assets/images/badangel/productos/tops/2-espaldaV.webp";
+
 // Listado de productos. Cada prenda con todos los datos requeridos
 // Alternar el orden de las imagenes principal y hover para que la animacion se muestre en frentes diferentes
 export const products = [
@@ -39,9 +48,9 @@ export const products = [
     imagenHover: ART007RE,
     image3Detail: "",
     image4Detail: "",
-    precio: 6400,
-    oferta: false,
-    precioOferta: null,
+    precio: 85000,
+    oferta: true,
+    precioOferta: 65000,
     talle: "Único ( S al L )",
     detalle:
       "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
@@ -59,9 +68,9 @@ export const products = [
     imagenHover: ART007NR,
     image3Detail: "",
     image4Detail: "",
-    precio: 6400,
-    oferta: false,
-    precioOferta: null,
+    precio: 85000,
+    oferta: true,
+    precioOferta: 65000,
     talle: "Único ( S al L )",
     detalle:
       "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
@@ -79,9 +88,9 @@ export const products = [
     imagenHover: ART007BNE,
     image3Detail: "",
     image4Detail: "",
-    precio: 6400,
-    oferta: false,
-    precioOferta: null,
+    precio: 85000,
+    oferta: true,
+    precioOferta: 65000,
     talle: "Único ( S al L )",
     detalle:
       "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
@@ -100,9 +109,9 @@ export const products = [
     imagenHover: ART007B,
     image3Detail: "",
     image4Detail: "",
-    precio: 6400,
-    oferta: false,
-    precioOferta: null,
+    precio: 85000,
+    oferta: true,
+    precioOferta: 65000,
     talle: "Único ( S al L )",
     detalle:
       "Buzo oversize con capucha cápsula, bolsillo canguro y mangas XL. Presenta bordados con púas en codos y hombros, más doble estampa en delantero y trasero.",
@@ -120,7 +129,7 @@ export const products = [
     imagenHover: ART004E,
     image3Detail: "",
     image4Detail: "",
-    precio: 6400,
+    precio: 40000,
     oferta: false,
     precioOferta: 5000,
     talle: "40",
@@ -140,8 +149,8 @@ export const products = [
     imagenHover: ART003,
     image3Detail: "",
     image4Detail: "",
-    precio: 9800,
-    oferta: true,
+    precio: 40000,
+    oferta: false,
     precioOferta: 7200,
     talle: "42",
     detalle:
@@ -160,7 +169,7 @@ export const products = [
     imagenHover: ART002E,
     image3Detail: "",
     image4Detail: "",
-    precio: 7500,
+    precio: 40000,
     oferta: false,
     precioOferta: null,
     talle: "40",
@@ -177,13 +186,13 @@ export const products = [
     codigo: "ART005",
     categoria: "tops",
     titulo: "TOP DEAD TRIBAL",
-    imagenPrincipal: ART001,
-    imagenHover: ART001E,
-    image3Detail: "",
-    image4Detail: "",
-    precio: 6400,
-    oferta: false,
-    precioOferta: null,
+    imagenPrincipal: ART005,
+    imagenHover: ART005E,
+    image3Detail: ART005S1,
+    image4Detail:  ART005S2,
+    precio: 14000,
+    oferta: true,
+    precioOferta: 7000,
     talle: "S",
     detalle:
       "Top cruzado con estampas en delantero y trasero.",
@@ -193,26 +202,6 @@ export const products = [
     material: "Jersey de algodón 100%",
     color: "negro con estampa tribal",
   },
-    {
-    codigo: "ART006",
-    categoria: "tops",
-    titulo: "TOP DEAD TOUCH",
-    imagenPrincipal: ART001,
-    imagenHover: ART001E,
-    image3Detail: "",
-    image4Detail: "",
-    precio: 6400,
-    oferta: false,
-    precioOferta: null,
-    talle: "S",
-    detalle:
-      "Top cruzado con estampas en delantero y trasero.",
-    detalle1: "Top cruzado",
-      disponibilidad: "Stock Limitado",
-    coleccion: "",
-    material: "Jersey de algodón 100%",
-    color: "negro con estampa exclusiva",
-  },
   {
     codigo: "ART001",
     categoria: "tops",
@@ -221,8 +210,8 @@ export const products = [
     imagenHover: ART001E,
     image3Detail: "",
     image4Detail: "",
-    precio: 12000,
-    oferta: true,
+    precio: 20000,
+    oferta: false,
     precioOferta: 8900,
     talle: "40",
     detalle:
@@ -233,6 +222,27 @@ export const products = [
     material: "100% poliéster elastizado",
     color: "blanco con estampas,"
   },
+    {
+    codigo: "ART006",
+    categoria: "tops",
+    titulo: "TOP DEAD TOUCH",
+    imagenPrincipal: ART006E,
+    imagenHover: ART006,
+    image3Detail: ART006S1,
+    image4Detail: "",
+    precio: 14000,
+    oferta: true,
+    precioOferta: 7000,
+    talle: "S",
+    detalle:
+      "Top cruzado con estampas en delantero y trasero.",
+    detalle1: "Top cruzado",
+      disponibilidad: "Stock Limitado",
+    coleccion: "",
+    material: "Jersey de algodón 100%",
+    color: "negro con estampa exclusiva",
+  },
+  
   
    {
     codigo: "ART008",

@@ -119,45 +119,56 @@ function Main() {
                       </div>
                     </div>
                     <div className="text-slate-600 dark:text-slate-500 px-5 mt-5">
-                      <div className="flex items-center">
-                        {prod.oferta ? (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                      {prod.oferta ? (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" xs:text-sm xl:text-base italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="line-through mr-2 text-lg">
                               Precio: ${prod.precio}
                             </span>
                             <span className="text-red-500 font-bold text-xl">
                               ${prod.precioOferta}
                             </span>
-                          </p>
-                        ) : (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" text-lg italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                            <span className="bg-red-600 text-white text-xs font-bold ml-2 w-10 h-10 flex items-center justify-center rounded-full">
+                              -
+                              {Math.round(
+                                ((prod.precio - prod.precioOferta) /
+                                  prod.precio) *
+                                  100
+                              )}
+                              %
+                            </span>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" text-lg italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="font-bold text-lg">
                               Precio: ${prod.precio}
                             </span>
-                          </p>
-                        )}
-                      </div>
-                      <div className="flex items-center mt-2 text-lg">
-                        <Lucide icon="Layers" className="w-4 h-4 mr-2" />
-                        Disponibilidad: {prod.disponibilidad}
-                      </div>
-                      <div
-                        className="flex items-center mt-2 text-lg cursor-pointer"
-                        onClick={() => openModal(prod)}
-                      >
-                        Ver más
-                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                      </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <div className="flex items-center px-5 mt-2 text-lg">
+                      <Lucide icon="Layers" className="w-4 h-4 mr-2" />
+                      Disponibilidad: {prod.disponibilidad}
+                    </div>
+                    <div
+                      className="flex items-center mt-2 px-5 text-lg cursor-pointer"
+                      onClick={() => openModal(prod)}
+                    >
+                      Ver más
+                      <Lucide icon="Plus" className="w-4 h-4 ml-2" />
                     </div>
                   </div>
                 </div>
@@ -230,49 +241,61 @@ function Main() {
                       </div>
                     </div>
                     <div className="text-slate-600 dark:text-slate-500 px-5 mt-5">
-                      <div className="flex items-center">
-                        {prod.oferta ? (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                      {prod.oferta ? (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" xs:text-sm xl:text-base italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="line-through mr-2 text-lg">
                               Precio: ${prod.precio}
                             </span>
                             <span className="text-red-500 font-bold text-xl">
                               ${prod.precioOferta}
                             </span>
-                          </p>
-                        ) : (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" text-lg italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                            <span className="bg-red-600 text-white text-xs font-bold ml-2 w-10 h-10 flex items-center justify-center rounded-full">
+                              -
+                              {Math.round(
+                                ((prod.precio - prod.precioOferta) /
+                                  prod.precio) *
+                                  100
+                              )}
+                              %
+                            </span>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" text-lg italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="font-bold text-lg">
                               Precio: ${prod.precio}
                             </span>
-                          </p>
-                        )}
-                      </div>
-                      <div className="flex items-center mt-2 text-lg">
-                        <Lucide icon="Layers" className="w-4 h-4 mr-2" />
-                        Disponibilidad: {prod.disponibilidad}
-                      </div>
-                      <div
-                        className="flex items-center mt-2 text-lg cursor-pointer"
-                        onClick={() => openModal(prod)}
-                      >
-                        Ver más
-                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                      </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <div className="flex items-center px-5 mt-2 text-lg">
+                      <Lucide icon="Layers" className="w-4 h-4 mr-2" />
+                      Disponibilidad: {prod.disponibilidad}
+                    </div>
+                    <div
+                      className="flex items-center mt-2 px-5 text-lg cursor-pointer"
+                      onClick={() => openModal(prod)}
+                    >
+                      Ver más
+                      <Lucide icon="Plus" className="w-4 h-4 ml-2" />
+                    </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              
             ))}
         </div>
       </section>
@@ -338,45 +361,56 @@ function Main() {
                       </div>
                     </div>
                     <div className="text-slate-600 dark:text-slate-500 px-5 mt-5">
-                      <div className="flex items-center">
-                        {prod.oferta ? (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                      {prod.oferta ? (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" xs:text-sm xl:text-base italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="line-through mr-2 text-lg">
                               Precio: ${prod.precio}
                             </span>
                             <span className="text-red-500 font-bold text-xl">
                               ${prod.precioOferta}
                             </span>
-                          </p>
-                        ) : (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" text-lg italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                            <span className="bg-red-600 text-white text-xs font-bold ml-2 w-10 h-10 flex items-center justify-center rounded-full">
+                              -
+                              {Math.round(
+                                ((prod.precio - prod.precioOferta) /
+                                  prod.precio) *
+                                  100
+                              )}
+                              %
+                            </span>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" text-lg italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="font-bold text-lg">
                               Precio: ${prod.precio}
                             </span>
-                          </p>
-                        )}
-                      </div>
-                      <div className="flex items-center mt-2 text-lg">
-                        <Lucide icon="Layers" className="w-4 h-4 mr-2" />
-                        Disponibilidad: {prod.disponibilidad}
-                      </div>
-                      <div
-                        className="flex items-center mt-2 text-lg cursor-pointer"
-                        onClick={() => openModal(prod)}
-                      >
-                        Ver más
-                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                      </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <div className="flex items-center px-5 mt-2 text-lg">
+                      <Lucide icon="Layers" className="w-4 h-4 mr-2" />
+                      Disponibilidad: {prod.disponibilidad}
+                    </div>
+                    <div
+                      className="flex items-center mt-2 px-5 text-lg cursor-pointer"
+                      onClick={() => openModal(prod)}
+                    >
+                      Ver más
+                      <Lucide icon="Plus" className="w-4 h-4 ml-2" />
                     </div>
                   </div>
                 </div>
@@ -446,49 +480,61 @@ function Main() {
                       </div>
                     </div>
                     <div className="text-slate-600 dark:text-slate-500 px-5 mt-5">
-                      <div className="flex items-center">
-                        {prod.oferta ? (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" xs:text-sm xl:text-base italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                      {prod.oferta ? (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" xs:text-sm xl:text-base italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="line-through mr-2 text-lg">
                               Precio: ${prod.precio}
                             </span>
                             <span className="text-red-500 font-bold text-xl">
                               ${prod.precioOferta}
                             </span>
-                          </p>
-                        ) : (
-                          <p>
-                            <div className="flex items-center mt-1 mb-3">
-                              <span className=" text-lg italic">
-                                {prod.detalle1}
-                              </span>
-                            </div>
+                            <span className="bg-red-600 text-white text-xs font-bold ml-2 w-10 h-10 flex items-center justify-center rounded-full">
+                              -
+                              {Math.round(
+                                ((prod.precio - prod.precioOferta) /
+                                  prod.precio) *
+                                  100
+                              )}
+                              %
+                            </span>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="mt-1 mb-3">
+                            <span className=" text-lg italic">
+                              {prod.detalle1}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
                             <span className="font-bold text-lg">
                               Precio: ${prod.precio}
                             </span>
-                          </p>
-                        )}
-                      </div>
-                      <div className="flex items-center mt-2 text-lg">
-                        <Lucide icon="Layers" className="w-4 h-4 mr-2" />
-                        Disponibilidad: {prod.disponibilidad}
-                      </div>
-                      <div
-                        className="flex items-center mt-2 text-lg cursor-pointer"
-                        onClick={() => openModal(prod)}
-                      >
-                        Ver más
-                        <Lucide icon="Plus" className="w-4 h-4 ml-2" />
-                      </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <div className="flex items-center px-5 mt-2 text-lg">
+                      <Lucide icon="Layers" className="w-4 h-4 mr-2" />
+                      Disponibilidad: {prod.disponibilidad}
+                    </div>
+                    <div
+                      className="flex items-center mt-2 px-5 text-lg cursor-pointer"
+                      onClick={() => openModal(prod)}
+                    >
+                      Ver más
+                      <Lucide icon="Plus" className="w-4 h-4 ml-2" />
+                    </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              
             ))}
         </div>
       </section>
@@ -505,10 +551,11 @@ function Main() {
       )}
       {/* BEGIN: Products Modal */}
       {isModalOpen && selectedProduct && (
-        <ProductsModal 
-        product={selectedProduct} 
-        show={isModalOpen}
-        onClose={closeComponent} />
+        <ProductsModal
+          product={selectedProduct}
+          show={isModalOpen}
+          onClose={closeComponent}
+        />
       )}
       {/* END: Products Modal */}
     </>
