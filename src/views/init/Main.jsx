@@ -5,10 +5,10 @@ import classnames from "classnames";
 import { useState, useEffect } from "react";
 import banner from "../../assets/images/badangel/banner2.jpeg";
 import banner2 from "../../assets/images/badangel/bannerV.jpg";
-import tituloBuzos from "../../assets/images/badangel/productos/buzos/TITULO-BUZOS-dark.jpg";
-import tituloTops from "../../assets/images/badangel/productos/tops/titulo-tops.jpg";
-import tituloPantalones from "../../assets/images/badangel/productos/buzos/TITULO-PANTALONES-dark.jpg";
-import tituloBolsos from "../../assets/images/badangel/productos/bolsos/titulo-bags.jpg";
+import tituloBuzos from "../../assets/images/badangel/titulo-buzos.png";
+import tituloTops from "../../assets/images/badangel/titulo-tops.png";
+import tituloPantalones from "../../assets/images/badangel/titulo-pantalones.png";
+import tituloBolsos from "../../assets/images/badangel/titulo-bags.png";
 import ProductsModal from "./ModalProductos";
 
 function Main() {

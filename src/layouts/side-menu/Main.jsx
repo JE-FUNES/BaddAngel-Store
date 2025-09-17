@@ -14,7 +14,6 @@ import MobileMenu from "@/components/mobile-menu/Main";
 import SideMenuTooltip from "@/components/side-menu-tooltip/Main";
 import ScrollToHashElement from "./scroll";
 
-
 function Main() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,7 +33,7 @@ function Main() {
       <TopBar />
       <div className="flex overflow-hidden">
         {/* BEGIN: Side Menu */}
-      
+
         <nav className="side-nav">
           <ul>
             {/* BEGIN: First Child */}
@@ -193,7 +192,7 @@ function Main() {
         {/* BEGIN: Content */}
         <div className="content">
           <Outlet />
-           <ScrollToHashElement />
+          <ScrollToHashElement />
         </div>
         {/* END: Content */}
       </div>
