@@ -252,7 +252,7 @@ export const products = [
     imagenHover: ART008E,
     image3Detail: "",
     image4Detail: "",
-    precio: 6400,
+    precio: 15000,
     oferta: false,
     precioOferta: null,
     talle: "Mini",
